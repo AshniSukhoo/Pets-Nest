@@ -15,6 +15,12 @@
 
     @yield('css')
 
+            <!-- Scripts -->
+    <script>
+        window.Laravel = <?php echo json_encode([
+                'csrfToken' => csrf_token(),
+        ]); ?>
+    </script>
 
 </head>
 
@@ -42,14 +48,14 @@
             <!-- Left Side Of Navbar -->
             <ul class="nav navbar-nav">
                 <a href="{{ url('/') }}">
-                    <img src="{{ asset('img/logo-web.png') }}" alt="logo" style="width:90px;height:60px;">
+                    <img src="{{ asset('img/logo-web.png') }}" alt="logo" style="width:80px;height:50px;">
                 </a>
             </ul>
 
             <!-- drop down menu -->
             <ul class="nav navbar-nav" style>
                 <li class="active">
-                    <a href="#">Home</a>
+                    <a href="{{ url('/') }}">Home</a>
                 </li>
                 <li>
                     <a href="#" data-toggle="dropdown" class="dropdown-toggle">Pets categories <b class="caret"></b></a>
@@ -98,7 +104,6 @@
 
 
 
-
             <!-- Right Side Of Navbar -->
             <ul class="nav navbar-nav navbar-right">
                 <!-- Authentication Links -->
@@ -112,13 +117,26 @@
 
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"></a>
 
-                        <ul class="dropdown-menu" role="menu">
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-dashboard" aria-hidden="true"></i> chiwawa
-                                </a>
-                            </li>
-                        </ul>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    {{--<a href="{{ route('profile.show', ['user' => Auth::user()->id]) }}">
+                                        <i class="fa fa-user" aria-hidden="true"></i> My Profile
+                                    </a>--}}
+                                </li>
+                                <li class="divider"></li>
+                                {{--<li>
+                                    <a href="{{ url('/logout') }}"
+                                       onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();">
+                                        <i class="fa fa-sign-out" aria-hidden="true"></i> Logout
+                                    </a>
+
+                                    <form id="logout-form" action="{{ url('/logout') }}" method="POST"
+                                          style="display: none;">
+                                        {{ csrf_field() }}
+                                    </form>
+                                </li>--}}
+                            </ul>
                     </li>
                 @endif
             </ul>
@@ -126,8 +144,8 @@
         </div>
         <div class="colorgraph">
     </div>
+ </div>
 </nav>
-
 
 @yield('content')
 
