@@ -6613,3 +6613,15 @@ button.close {
 .main-body{
     padding-top: 60px;
 }
+
+/*
+*welcome page footer
+*/
+.footer {
+    background-color: #0d0d0d;
+    height: 10px;
+    width: 100%;
+    font-size: 1.1em;
+    text-align: center;
+    bottom: 0;
+}

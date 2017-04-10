@@ -62,8 +62,23 @@
                             <p>They give us so much that it is only fair that we return this unconditional love for them
                                 with nothing but the very best products.</p>
                         </div>
+
+                        <div class="col-md-6 text-sm-center service-block">
+                            <i class="fa fa-certificate" style="font-size:18px;" aria-hidden="true"></i>
+                            <h3>Services</h3>
+                            <p>We provide different type of services, we treat and groom your pets for you. We take care of
+                            each and one pet as our own.</p>
+                        </div>
+                        <div class="col-md-6 text-sm-center service-block">
+                            <i class="fa fa-home" style="font-size:18px;" aria-hidden="true"></i>
+                            <h3>The Shop</h3>
+                            <p>Right now we are current at Port Louis but soon we are going to create different outlet of our
+                            store everywhere so we can be near you.</p>
+                        </div>
+
                     </div>
                 </div>
+
                 <div class="col-md-4"> <img src="/img/macaw.jpg" class="img-fluid" /> </div>
             </div>
             <!-- /.row -->
@@ -81,7 +96,8 @@
                 <div class="col-md-4">
                     <p>We are an online pet shop but also have one store situated in the heart of Port Louis. We provide many facilities
                     and services such as buying and ordering new pets as per your likes.</p>
-                    <p>We aim in providing the best companion ideal for you. We spoil them with pet care products like nutritious foods and tasty snacks to help them grow healthy and strong.
+                    <p>We aim in providing the best companion ideal for you. We spoil them with pet care products like nutritious
+                        foods and tasty snacks to help them grow healthy and strong.
                         Surprise your pet with fun gifts like some new toys or a comfy bed which are also available at the store. </p>
                 </div>
                 <div class="col-md-4">
@@ -95,8 +111,14 @@
         </div>
     </section>
 
+    <div class="footer">
+        @include('Layouts.footer')
+    </div>
+
 @stop
 
 @section('js')
     <script src="{{ asset('js/welcome.js') }}"></script>
 @stop
+
+

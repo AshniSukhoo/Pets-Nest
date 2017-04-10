@@ -16,4 +16,8 @@ Route::get('/', [
     'as'   => 'page.welcome'
 ]);
 
+/*
+ * Privacy  policies page
+ */
+Route::get('privacy-policies', 'PoliciesController@index')->name('policies');
 
