@@ -53,7 +53,7 @@
             </ul>
 
             <!-- drop down menu -->
-            <ul class="nav navbar-nav" style>
+            <ul class="nav navbar-nav" style="margin-left:10px">
                 <li class="active">
                     <a href="{{ url('/') }}">Home</a>
                 </li>
