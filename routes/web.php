@@ -21,3 +21,12 @@ Route::get('/', [
  */
 Route::get('privacy-policies', 'PoliciesController@index')->name('policies');
 
+/*
+ * Dog page route
+ */
+Route::resource('dog', 'DogCategoryController');
+
+/*
+ * Dog food route
+ */
+Route::get('dog-food', 'DogCategoryController@food')->name('dogFood');

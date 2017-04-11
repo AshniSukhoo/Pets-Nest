@@ -61,7 +61,7 @@
                     <a href="#" data-toggle="dropdown" class="dropdown-toggle">Pets categories <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="#">Dog</a>
+                            <a href="{{ route('dog.index') }}">Dog</a>
                         </li>
 
                         <li class="divider"></li>
