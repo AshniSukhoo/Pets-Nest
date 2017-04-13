@@ -29,4 +29,8 @@ Route::resource('dog', 'DogCategoryController');
 /*
  * Dog food route
  */
-Route::get('dog-food', 'DogCategoryController@food')->name('dogFood');
+Route::get('dog-food', 'CategoryController@food')->name('dogFood');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

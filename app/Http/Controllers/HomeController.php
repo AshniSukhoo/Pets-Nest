@@ -7,14 +7,26 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
 
+    public function __construct()
+    {
+
+    }
+
     /**
-     * Load Welcome Page which acts as home page.
+     * Show the application dashboard.
      *
      * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        return view('home');
+    }
+
+    /*
+     * return welcome page
      */
     public function getWelcomePage()
     {
         return view('welcome');
     }
-
 }

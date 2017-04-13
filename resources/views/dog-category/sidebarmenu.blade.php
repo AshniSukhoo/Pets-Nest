@@ -8,7 +8,7 @@
             <ul class="nav spark-settings-stacked-tabs" role="tablist">
                 <li role="presentation">
                     <a href="{{ route('dog.index') }}">
-                        <i class="fa fa-file" aria-hidden="true"></i>
+                        <i class="fa fa-paw" aria-hidden="true"></i>
                        Dogs
                     </a>
                 </li>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Entity\DogImages;
 
 class DogCategoryController extends Controller
 {
@@ -13,6 +14,7 @@ class DogCategoryController extends Controller
      */
     public function index()
     {
+
         // Return View with dog items.
         return view('dog-category.dog-page');
     }
@@ -83,9 +85,4 @@ class DogCategoryController extends Controller
         //
     }
 
-    public function food()
-    {
-        // Return View with dog items.
-        return view('dog-category.dog-food');
-    }
 }
