@@ -2,21 +2,57 @@
 
 namespace App\Entity;
 
-use Illuminate\Database\Eloquent\SoftDeletingTrait;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Category extends Eloquent {
+class Category extends Model
+{
+    use SoftDeletes;
 
-	protected $table = 'category';
-	public $timestamps = true;
+    /**
+     * The attributes that should be mutated to dates.
+     *
+     * @var array
+     */
+    protected $dates = ['deleted_at'];
 
-	use SoftDeletingTrait;
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'name',
+        'slug',
+    ];
 
-	protected $dates = ['deleted_at'];
-	protected $fillable = array('category_id', 'type');
+    /**
+     * Get the route key for the model.
+     *
+     * @return string
+     */
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 
-	public function categoryOfProduct()
-	{
-		return $this->hasOne('Product');
-	}
+    /**
+     * Related Categories.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function relatedCategories()
+    {
+        return $this->belongsToMany(Category::class, 'related_categories', 'category_id', 'related_category_id');
+    }
 
+    /**
+     * Products of this Category.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function products()
+    {
+        return $this->belongsToMany(Product::class, 'categories_products');
+    }
 }

@@ -22,15 +22,11 @@ Route::get('/', [
 Route::get('privacy-policies', 'PoliciesController@index')->name('policies');
 
 /*
- * Dog page route
- */
-Route::resource('dog', 'DogCategoryController');
-
-/*
  * Dog food route
  */
-Route::get('dog-food', 'CategoryController@food')->name('dogFood');
+Route::resource('categories', 'CategoryController');
 
+/*
+ * Authentication routes.
+ */
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

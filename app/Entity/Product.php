@@ -2,21 +2,38 @@
 
 namespace App\Entity;
 
-use Illuminate\Database\Eloquent\SoftDeletingTrait;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Product extends Eloquent {
+class Product extends Model
+{
+    use SoftDeletes;
 
-	protected $table = 'product';
-	public $timestamps = true;
+    /**
+     * The attributes that should be mutated to dates.
+     *
+     * @var array
+     */
+    protected $dates = ['deleted_at'];
 
-	use SoftDeletingTrait;
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'name',
+        'description',
+        'image_path',
+    ];
 
-	protected $dates = ['deleted_at'];
-	protected $fillable = array('type', 'image_path', 'description', 'name');
-
-	public function productCategory()
-	{
-		return $this->hasMany('Category', 'category_id');
-	}
-
+    /**
+     * Categories of the product.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function categories()
+    {
+        return $this->belongsToMany(Category::class, 'categories_products');
+    }
 }

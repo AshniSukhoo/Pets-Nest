@@ -3,21 +3,22 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateCategoryTable extends Migration {
+class CreateCategoryTable extends Migration
+{
 
-	public function up()
-	{
-		Schema::create('category', function(Blueprint $table) {
-			$table->increments('id');
-			$table->timestamps();
-			$table->softDeletes();
-			$table->integer('category_id');
-			$table->string('type', 500);
-		});
-	}
+    public function up()
+    {
+        Schema::create('categories', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name');
+            $table->string('slug')->unique();
+            $table->timestamps();
+            $table->softDeletes();
+        });
+    }
 
-	public function down()
-	{
-		Schema::drop('category');
-	}
+    public function down()
+    {
+        Schema::drop('category');
+    }
 }
