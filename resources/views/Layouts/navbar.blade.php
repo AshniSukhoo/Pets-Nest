@@ -86,7 +86,7 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="#">
+                            <a href="">
                                 Grooming services
                             </a>
                         </li>
@@ -99,7 +99,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="{{ route('contact-us.create') }}">
                         <i class="fa fa-envelope" aria-hidden="true"></i> Contact US
                     </a>
                 </li>

@@ -50,7 +50,9 @@
                         </div>
                     @endif
                 @else
-
+                    <div class="col-md-9">
+                        @include('categories.no-product-found')
+                    </div>
                 @endif
             </div>
             <!--/.col-->

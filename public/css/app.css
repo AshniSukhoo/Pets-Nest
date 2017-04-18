@@ -8021,5 +8021,15 @@ button.close {
 }
 
 .container-padded {
-    padding-top: 30px;
+    padding-top: 80px;
 }
+
+/*
+ * Body with a background image
+ */
+.background-body {
+    background-image: url("/img/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+

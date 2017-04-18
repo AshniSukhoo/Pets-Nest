@@ -17,6 +17,8 @@ class CategoriesTableSeeder extends Seeder
         'Pets\' food',//7
         'Dogs\' food',//8
         'Dogs\' accessories',//9
+
+        //add categories
     ];
 
     protected $relatedCategories = [

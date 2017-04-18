@@ -30,3 +30,13 @@ Route::resource('categories', 'CategoryController');
  * Authentication routes.
  */
 Auth::routes();
+
+/*
+ * Grooming service route
+ */
+Route::resource('grooming', 'GroomingController');
+
+/*
+ * contact us route
+ */
+Route::resource('contact-us', 'ContactController');

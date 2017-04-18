@@ -4,6 +4,10 @@
     Registration
 @stop
 
+@section('body-class')
+    class="background-body"
+@stop
+
 @section('content')
     <div class="container container-padded">
         <div class="row">
