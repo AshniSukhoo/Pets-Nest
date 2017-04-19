@@ -12,10 +12,10 @@
         <!-- Slider main container -->
     <div class="swiper-container main-slider" id="myCarousel">
         <div class="swiper-wrapper">
-            <div class="swiper-slide slider-bg-position" style="background:url('/img/dog.jpg')" data-hash="slide1">
+            <div class="swiper-slide slider-bg-position" style="background:url('/img/cat.jpg')" data-hash="slide1">
                 <h2>Animals are gifts from god.</h2>
             </div>
-            <div class="swiper-slide slider-bg-position" style="background:url('/img/cat.jpg')" data-hash="slide2">
+            <div class="swiper-slide slider-bg-position" style="background:url('/img/dog.jpg')" data-hash="slide2">
                 <h2>Men's best friend.</h2>
             </div>
         </div>

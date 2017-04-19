@@ -21,6 +21,12 @@
 
                     <div class="panel-body">
 
+                        @if(session('success_message'))
+                            <div class="alert alert-success">
+                                {{ session('success_message') }}
+                            </div>
+                        @endif
+
                         @if(count($errors))
                             <div class="alert alert-danger">
                                 <ul>
@@ -67,7 +73,7 @@
 
                             <button type="submit" class="btn btn-primary">
                                 <i class="fa fa-wrench" aria-hidden="true"></i>
-                                Save
+                                Send
                             </button>
 
                             <a class="btn btn-danger" href="{{ route('page.welcome') }}">

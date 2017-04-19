@@ -86,7 +86,7 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="">
+                            <a href="{{ route('getGroomingForm') }}">
                                 Grooming services
                             </a>
                         </li>
@@ -118,6 +118,21 @@
                         </a>
                     </li>
                 @else
+                    <li>
+                        <a href="{{ url('/logout') }}"
+                           onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();">
+                            <i class="fa fa-sign-out" aria-hidden="true"></i> Logout
+                        </a>
+
+                        <form id="logout-form" action="{{ url('/logout') }}" method="POST"
+                              style="display: none;">
+                            {{ csrf_field() }}
+                        </form>
+
+                    </li>
+
+
                 @endif
             </ul>
         </div>

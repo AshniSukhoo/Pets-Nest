@@ -32,11 +32,19 @@ Route::resource('categories', 'CategoryController');
 Auth::routes();
 
 /*
- * Grooming service route
- */
-Route::resource('grooming', 'GroomingController');
-
-/*
  * contact us route
  */
-Route::resource('contact-us', 'ContactController');
+Route::resource('contact-us', 'ContactController', [
+    'only' => [
+        'create',
+        'store',
+    ],
+]);
+
+/*
+ * Grooming service route
+ */
+Route::get('services/grooming', 'BookingController@getGroomingForm')->name('getGroomingForm');
+
+Route::get('services/grooming-save', 'BookingController@saveGroomingForm')->name('saveGroomingForm');
+

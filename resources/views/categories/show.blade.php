@@ -32,6 +32,7 @@
                                             <h3>
                                                 {{ $product->name }}
                                             </h3>
+                                            <p> Rs {{ $product->price }} </p>
                                             {!! $product->description !!}
                                             <p>
                                                 <a href="#" class="btn btn-primary">Buy Now!</a>

@@ -17,8 +17,15 @@ class CategoriesTableSeeder extends Seeder
         'Pets\' food',//7
         'Dogs\' food',//8
         'Dogs\' accessories',//9
+        'Pets\' accessories', //10 <--
+        'Cats\' food', //11
+        'Cats\' accessories', //12
+        'Fish\' food', //13
+        'Fish\' accessories', //14
+        'Birds\' food', //15
+        'Birds\' accessories', //16
 
-        //add categories
+
     ];
 
     protected $relatedCategories = [
@@ -28,6 +35,18 @@ class CategoriesTableSeeder extends Seeder
         [9, 2],
         [8, 9],
         [9, 8],
+        [11, 3], //<--
+        [3, 11],
+        [12, 3],
+        [3, 12],
+        [13, 4],
+        [4, 13],
+        [14, 4],
+        [4, 14],
+        [15, 5],
+        [5, 15],
+        [16, 5],
+        [5, 16],
     ];
 
     /**
