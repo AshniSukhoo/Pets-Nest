@@ -46,5 +46,12 @@ Route::resource('contact-us', 'ContactController', [
  */
 Route::get('services/grooming', 'BookingController@getGroomingForm')->name('getGroomingForm');
 
-Route::get('services/grooming-save', 'BookingController@saveGroomingForm')->name('saveGroomingForm');
+Route::post('services/grooming-save', 'BookingController@saveGroomingForm')->name('saveGroomingForm');
+
+/*
+ * Veterinary service route
+ */
+Route::get('services/veterinary', 'BookingController@getVeterinaryForm')->name('getVeterinaryForm');
+
+Route::post('services/veterinary-save', 'BookingController@saveVeterinaryForm')->name('saveVeterinaryForm');
 

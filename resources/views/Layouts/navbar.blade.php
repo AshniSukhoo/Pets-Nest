@@ -64,6 +64,24 @@
                                 Dogs' food
                             </a>
                         </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="{{ route('categories.show', ['category' => 'cats-food']) }}">
+                                Cats' food
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="{{ route('categories.show', ['category' => 'fish-food']) }}">
+                                Fish' food
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="{{ route('categories.show', ['category' => 'birds-food']) }}">
+                                Birds' food
+                            </a>
+                        </li>
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -75,6 +93,24 @@
                         <li>
                             <a href="{{ route('categories.show', ['category' => 'dogs-accessories']) }}">
                                 Dogs' accessories
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="{{ route('categories.show', ['category' => 'cats-accessories']) }}">
+                                Cats' accessories
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="{{ route('categories.show', ['category' => 'fish-accessories']) }}">
+                                Fish' accessories
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="{{ route('categories.show', ['category' => 'birds-accessories']) }}">
+                                Birds' accessories
                             </a>
                         </li>
                     </ul>
@@ -92,7 +128,7 @@
                         </li>
                         <li class="divider"></li>
                         <li>
-                            <a href="#">
+                            <a href="{{ route('getVeterinaryForm') }}">
                                 Veterinary services
                             </a>
                         </li>

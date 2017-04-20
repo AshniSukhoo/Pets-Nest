@@ -1,7 +1,7 @@
 @extends('Layouts.homeApp')
 
 @section('title')
-    Grooming Appointment
+    Veterinary Appointment
 @stop
 
 @section('css')
@@ -16,11 +16,12 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <h1 style="margin-top: 80px"> Grooming Appointment</h1>
+                <h1 style="margin-top: 80px"> Veterinary Appointment</h1>
             </div>
         </div>
 
-        @include('bookings.partials._sideggroominginfo')
+        @include('bookings.partials._sidevetinfo')
+
 
         <div class="col-md-8">
             <div class="panel panel-default">
@@ -43,7 +44,7 @@
                         </div>
                     @endif
 
-                    <form class="form-horizontal" role="form" method="POST" action="{{ route('saveGroomingForm') }}">
+                    <form class="form-horizontal" role="form" method="POST" action="{{ route('saveVeterinaryForm') }}">
 
                         <input type="hidden" name="_method" value="POST">
 
@@ -52,22 +53,22 @@
 
                         <div class="form-group">
                             <div class="col-md-12">
-                                <label for="grooming_subject" class="control-label">Subject</label>
-                                <input id="grooming_subject" type="text" class="form-control" name="grooming_subject">
+                                <label for="veterinary_subject" class="control-label">Subject</label>
+                                <input id="veterinary_subject" type="text" class="form-control" name="veterinary_subject">
                             </div>
                         </div>
 
                         <div class="form-group">
                             <div class="col-md-12">
-                                <label for="grooming_description" class="control-label">Description</label>
-                                <textarea id="grooming_description" class="form-control" name="grooming_description"> </textarea>
+                                <label for="veterinary_description" class="control-label">Description</label>
+                                <textarea id="veterinary_description" class="form-control" name="veterinary_description"> </textarea>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <div class="col-md-12">
-                                <label for="grooming_date" class="control-label">Date</label>
-                                <input id="grooming_date" type="text" class="form-control form_datetime" name="grooming_date" placeholder="Click to select a date">
+                                <label for="veterinary_date" class="control-label">Date</label>
+                                <input id="veterinary_date" type="text" class="form-control form_datetime" name="veterinary_date" placeholder="Click to select a date">
                             </div>
                         </div>
 
@@ -85,7 +86,6 @@
             </div>
         </div>
     </div>
-
 @stop
 
 @section('js')
